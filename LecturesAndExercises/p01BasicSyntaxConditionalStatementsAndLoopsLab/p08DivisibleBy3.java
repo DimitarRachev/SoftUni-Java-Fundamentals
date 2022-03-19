@@ -1,4 +1,4 @@
-package LecturesAndExercises.p01.BasicSyntaxConditionalStatementsAndLoopsLab;
+package LecturesAndExercises.p01BasicSyntaxConditionalStatementsAndLoopsLab;
 
 public class p08DivisibleBy3 {
     public static void main(String[] args) {

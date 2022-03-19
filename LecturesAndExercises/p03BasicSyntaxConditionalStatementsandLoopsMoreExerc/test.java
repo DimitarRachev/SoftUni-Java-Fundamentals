@@ -1,4 +1,4 @@
-package LecturesAndExercises.p03.BasicSyntaxConditionalStatementsandLoopsMoreExerc;
+package LecturesAndExercises.p03BasicSyntaxConditionalStatementsandLoopsMoreExerc;
 
 import java.util.Scanner;
 
