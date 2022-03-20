@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$" isTestSource="false" packagePrefix="LecturesAndExercises" />
+      <sourceFolder url="file://$MODULE_DIR$/p02BasicSyntaxConditionalStatementsAndLoopsExercise" isTestSource="false" packagePrefix="LecturesAndExercises.p02.BasicSyntaxConditionalStatementsAndLoopsExercise" />
+      <sourceFolder url="file://$MODULE_DIR$/p03BasicSyntaxConditionalStatementsandLoopsMoreExerc" isTestSource="false" packagePrefix="LecturesAndExercises.p03.BasicSyntaxConditionalStatementsandLoopsMoreExerc" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
