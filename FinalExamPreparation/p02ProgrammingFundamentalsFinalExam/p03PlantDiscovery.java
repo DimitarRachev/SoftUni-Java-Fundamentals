@@ -6,7 +6,7 @@ public class p03PlantDiscovery {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        Map<String, Plant>plants = new LinkedHashMap<>();
+        Map<String, Plant> plants = new LinkedHashMap<>();
         int n = Integer.parseInt(scanner.nextLine());
         while (n-- > 0) {
             String[] input = scanner.nextLine().split("<->");
@@ -19,33 +19,25 @@ public class p03PlantDiscovery {
         while (!"Exhibition".equals(line = scanner.nextLine())) {
             String[] input = line.split(":\\s+");
             String command = input[0];
-            String[]plantInfo = input[1].split(" - ");
+            String[] plantInfo = input[1].split(" - ");
             String plant = plantInfo[0];
+            if (!plants.containsKey(plant)) {
+                System.out.println("error");
 
-            switch (command) {
-                case "Rate":
-                    if (plants.containsKey(plant)) {
+            } else {
+                switch (command) {
+                    case "Rate":
                         Double rating = Double.parseDouble(plantInfo[1]);
                         plants.get(plant).getRatings().add(rating);
-                    } else {
-                        System.out.println("error");
-                    }
-                    break;
-                case "Update":
-                    if (plants.containsKey(plant)) {
+                        break;
+                    case "Update":
                         int rarity = Integer.parseInt(plantInfo[1]);
                         plants.get(plant).setRarity(rarity);
-                    } else {
-                        System.out.println("error");
-                    }
-                    break;
-                case "Reset":
-                    if (plants.containsKey(plant)) {
+                        break;
+                    case "Reset":
                         plants.get(plant).resetRatings();
-                    } else {
-                        System.out.println("error");
-                    }
-                    break;
+                        break;
+                }
             }
         }
 
@@ -53,7 +45,7 @@ public class p03PlantDiscovery {
         plants.values().forEach(System.out::println);
     }
 
-    static class Plant{
+    static class Plant {
         String name;
         int rarity;
         List<Double> ratings;
@@ -64,8 +56,8 @@ public class p03PlantDiscovery {
             this.ratings = new ArrayList<>();
         }
 
-        private Double  getAverageRating(){
-            return this.ratings.stream().mapToDouble(e ->e).average().orElse(0);
+        private Double getAverageRating() {
+            return this.ratings.stream().mapToDouble(e -> e).average().orElse(0);
         }
 
         public void setRarity(int rarity) {
@@ -77,7 +69,7 @@ public class p03PlantDiscovery {
         }
 
         public void resetRatings() {
-                this.ratings = new ArrayList<>();
+            this.ratings = new ArrayList<>();
         }
 
         @Override
