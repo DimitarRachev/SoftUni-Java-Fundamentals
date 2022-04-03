@@ -1,0 +1,2 @@
+Link for problems description:
+https://judge.softuni.org/Contests/2518/02-Programming-Fundamentals-Final-Exam
